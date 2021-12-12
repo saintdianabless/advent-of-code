@@ -1,3 +1,5 @@
 **/.vscode
 **/target
 **/build
+**/bin
+**/obj
