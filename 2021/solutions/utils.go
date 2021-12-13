@@ -22,3 +22,16 @@ func readInput(file string) []string {
 	}
 	return input
 }
+
+func readLines(filepath string) []string {
+	f, err := os.Open(filepath)
+	if err != nil {
+		panic(err)
+	}
+	scanner := bufio.NewScanner(f)
+	lines := make([]string, 0)
+	for scanner.Scan() {
+		lines = append(lines, scanner.Text())
+	}
+	return lines
+}
